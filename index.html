@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoSport</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9EKzMXISjHw_eUPmhpiXr_phivE-qeROlWfYcNESP6uXRTDTQ-B191g07QGLOouxYzfDkUzqu2jq03jpxZlDOVyKD99RiuyXH6-SaVIX3O5NuJq6cgmwG1mQK-wd09RKMIXsDlDQp-SxH54g-p9_7FgtEvNTYab43sRGzJ0xBZJmXVKBdyDuTzu2i_wtM/s500/logomotosports.ico" type="image/x-icon">
+
+    <script src='https://cdn.jsdelivr.net/momentjs/latest/moment.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/momentjs/latest/moment-timezone.min.js'></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section h2 {
+            color: #333;
+            font-weight: 700;
+            /* Menggunakan font bold */
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            header {
+                padding: 30px 0;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+            }
+
+            .responsive-img {
+                margin-top: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            section {
+                padding: 10px;
+            }
+
+            .cta-button {
+                font-size: 14px;
+            }
+        }
+
+        #clock-container {
+            text-align: center;
+        }
+
+        #clock {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        #calendar {
+            font-size: 1.2em;
+        }
+
+        div#clocktw,
+        svg.svg-inline--fa.fa-calendar-alt.fa-w-14 {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 1px;
+        }
+
+        div#clocktw {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        @keyframes playerload {
+            0% {
+                transform: rotate(0)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').innerHTML = timeString;
+        }
+
+        function updateCalendar() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            const dateString = now.toLocaleDateString('id', options);
+            document.getElementById('calendar').innerHTML = dateString;
+        }
+
+        setInterval(() => {
+            updateClock();
+            updateCalendar();
+        }, 1000);
+
+        // Initial update
+        updateClock();
+        updateCalendar();
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>MOTOSPORT</h1>
+    </header>
+
+    <!--<div id="clock-container">
+        <div id="clock"></div>
+        <div id="calendar"></div>
+    </div>
+    <div id="clock-container">
+        <div id="clock"></div>
+        <div id="calendar"></div>
+    </div>-->
+
+    <section>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9EKzMXISjHw_eUPmhpiXr_phivE-qeROlWfYcNESP6uXRTDTQ-B191g07QGLOouxYzfDkUzqu2jq03jpxZlDOVyKD99RiuyXH6-SaVIX3O5NuJq6cgmwG1mQK-wd09RKMIXsDlDQp-SxH54g-p9_7FgtEvNTYab43sRGzJ0xBZJmXVKBdyDuTzu2i_wtM/s1600/logomotosports.png" alt="Deskripsi gambar" class="responsive-img" style="max-width: 200px;">
+        <h2>MotoSport v2.6</h2>
+        <h2 style="text-align: left;">Nikmati Hiburan Tanpa Batas dengan Aplikasi TV Online</h2>
+        <p>Selalu ingin membawa hiburan favorit Anda ke mana-mana? Temukan kebebasan menonton kapan saja, di mana saja dengan Aplikasi TV Online kami! Dengan akses ke berbagai saluran, film, acara TV, dan konten eksklusif, aplikasi ini menawarkan pengalaman menonton yang tak terlupakan.</p>
+        <h3 style="text-align: left;">📺 Fitur Utama:</h3>
+        <p></p>
+        <ul style="text-align: left;">
+            <li><b>Streaming Langsung</b>: Saksikan saluran TV favorit Anda secara langsung dan tanpa gangguan.</li>
+            <li><b>On-Demand</b>: Pilih dari ribuan judul film dan acara TV untuk dinikmati kapan saja.</li>
+            <li><b>Kustomisasi Personal</b>: Buat daftar putar pribadi Anda, dan nikmati konten yang disesuaikan dengan selera Anda.</li>
+            <li><b>Notifikasi Acara</b>: Dapatkan pemberitahuan tentang acara baru dan episode favorit Anda gabung telegram <a href="https://t.me/+CDwOyOAxF500MTFl" target="_blank">MotoSport</a>.</li>
+            <li><b>Kualitas HD</b>: Tonton dalam kualitas tinggi untuk pengalaman menonton yang maksimal.</li>
+        </ul>
+        <p></p>
+        <p>Bawa hiburan ke tingkat berikutnya dengan Aplikasi TV Online kami. Unduh sekarang dan jelajahi dunia konten yang luas di ujung jari Anda!</p>
+        <a href="#" class="cta-button">Download</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MotoSport.</p>
+    </footer>
+
+</body>
+
+</html>
